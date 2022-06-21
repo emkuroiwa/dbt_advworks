@@ -1,0 +1,13 @@
+version: 2
+
+models:
+    - name: dim_salesreasons
+      columns:
+        - name: salesreason_sk
+          description: The surrogate key of sales reason table
+          tests:
+            - unique
+            - not_null
+        
+        - name: name
+        - name: reasontype

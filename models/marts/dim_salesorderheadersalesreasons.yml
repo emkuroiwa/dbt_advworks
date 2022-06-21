@@ -1,0 +1,13 @@
+version: 2
+
+models:
+    - name: dim_salesorderheadersalesreasons
+      columns:
+        - name: salesorderheadersalesreason_sk
+          description: The surrogate key of sales order header sales reasons table
+          testes:
+            - unique
+            - not_null
+        
+        - name: salesreasonid
+        - name: salesorderid

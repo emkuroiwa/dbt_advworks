@@ -1,0 +1,28 @@
+version: 2
+
+models:
+    - name: dim_persons
+      columns:
+        - name: person_sk
+          description: The surrogate key of persons table
+          tests:
+            - unique
+            - not_null
+        
+        - name: businessentityid
+          description: The natural key of persons table
+        
+        - name: title
+          description: Describe if the person is 'Mrs.', 'Mr.', 'Sra.', 'Sr.', or 'Ms.'
+        
+        - name: firstname
+          description: Describe the first name of the custumer
+        
+        - name: middlename
+          description: If the customer has middle name it is described in this column
+
+        - name: lastname
+          description: This column present the customer last name
+
+        - name: suffix
+          description: If the customer name has a suffix, it is indicated in this column

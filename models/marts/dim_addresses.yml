@@ -1,0 +1,14 @@
+version: 2
+
+models:
+    - name: dim_addresses
+      columns:
+        - name: address_sk
+          description: The surrogate key of addresses table
+          tests:
+            - unique
+            - not_null
+            
+        - name: addressid
+        - name: stateprovinceid
+        - name: city
