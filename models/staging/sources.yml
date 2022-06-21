@@ -1,0 +1,137 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    description: 'This is a replica of the Postgres database used by our client'
+    database: erudite-imprint-350618
+    schema: adventure_works
+    tables:
+      - name: salesorderdetail
+        description: 'This table presents the relation of orders and respective products bought by the customer.'
+        columns:
+          - name: salesorderdetailid
+            description: 'Primary key of the salesorderdetail table'
+            tests:
+              - unique
+              - not_null
+          - name: salesorderid
+          - name: productid
+            description: Represent the product id
+          - name: orderqty
+          - name: unitprice
+          - name: specialofferid
+          - name: unitpricediscount
+
+      - name: salesorderheader
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
+          - name: territoryid
+          - name: status
+          - name: orderdate
+          - name: creditcardid
+          - name: customerid
+          - name: totaldue
+      
+      - name: salesorderheadersalesreason
+        columns:
+          - name: salesreasonid
+          - name: salesorderid
+      
+      - name: salesreason
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
+          - name: name
+          - name: reasontype
+      
+      - name: product
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
+          - name: name
+          - name: standardcost
+          - name: listprice
+          - name: style
+          - name: size
+          - name: color
+      
+      - name: creditcard
+        columns:
+          - name: creditcardid
+            tests:
+              - unique
+              - not_null
+          - name: cardtype
+      
+      - name: person
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: title
+          - name: firstname
+          - name: middlename
+          - name: lastname
+          - name: suffix
+          - name: persontype
+          
+      - name: businessentityaddress
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+          - name: businessentityid
+          - name: addresstypeid
+      
+      - name: address
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+          - name: city
+          - name: stateprovinceid
+      
+      - name: stateprovince
+        columns:
+          - name: stateprovinceid
+            tests:
+              - unique
+              - not_null
+          - name: name
+          - name: countryregioncode
+          - name: territoryid
+      
+      - name: salesterritory
+        columns:
+          - name: territoryid
+            tests:
+              - unique
+              - not_null
+          - name: name
+          - name: countryregioncode
+      
+      - name: personcreditcard
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+          - name: creditcardid
+      
+      - name: countryregion
+        columns:
+          - name: countryregioncode
+            tests:
+              - unique
+              - not_null
+          - name: name
