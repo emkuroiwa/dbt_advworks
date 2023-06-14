@@ -1,0 +1,15 @@
+version: 2
+
+models:
+    - name: dim_stateprovinces
+      columns:
+        - name: stateprovince_sk
+          description: The surrogate key of state provinces table
+          tests:
+            - unique
+            - not_null
+
+        - name: stateprovinceid
+        - name: name
+        - name: countryregioncode
+        - name: territoryid

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+    - name: dim_businessentityaddress
+      columns:
+        - name: businessentityaddress_sk
+          description: The surrogate key of business entity address table
+          tests:
+            - unique
+            - not_null
+            
+        - name: addressid
+        - name: businessentityid
+        - name: addresstypeid

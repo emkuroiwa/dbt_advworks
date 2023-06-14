@@ -1,0 +1,14 @@
+version: 2
+
+models:
+    - name: dim_salesterritories
+      columns:
+        - name: salesterritory_sk
+          description: The surrogate key of sales territories table
+          tests:
+            - unique
+            - not_null
+        
+        - name: territoryid
+        - name: name
+        - name: countryregioncode

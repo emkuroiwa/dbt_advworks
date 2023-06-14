@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: fact_salesorderdetails
+    columns:
+      - name: salesorderdetail_sk
+        description: The surrogate key of fact table.
+        tests:
+          - unique
+          - not_null
+      
+      - name: salesorderid
+        description: This column presents the sales order ID number
+
+      - name: customerid
+        description: The customer ID number
+      
+      - name: productid
+        description: Column with product ID number
+      
+      - name: productname
+        description: Column with product name according to its respective ID
+ 
+      - name: specialofferid
+        description: Column with special offer ID number
+      
+      - name: orderqty
+        description: Column with the product order quantity
+            
+      - name: unitprice
+        description: Column with the product unit price value
+      
+      - name: territoryid
+        description: Column with the territory ID number
+      
+      - name: creditcardid
+        description: Column with the credit card ID number
+      
+      - name: businessentityid
+        description: Cloumn with the business entity ID number
+      
+      - name: firstname
+        description: Column with the customer first name
+      
+      - name: middlename
+        description: Column with the customer middle name
+      
+      - name: lastname
+        description: Column with the customer last name
+      
+      - name: city
+        description: Column with the city name
+      
+      - name: stateprovinceid
+        description: Column with the state province ID number

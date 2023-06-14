@@ -1,0 +1,25 @@
+version: 2
+
+models:
+    - name: dim_salesorderheaders
+      columns:
+        - name: salesorderheader_sk
+          description: The surrogate key of sales order headers table
+          tests:
+            - unique
+            - not_null
+        
+        - name: salesorderid
+          description: The natural key of sales order headers table
+        
+        - name: territoryid
+
+        - name: status
+
+        - name: orderdate
+
+        - name: creditcardid
+
+        - name: customerid
+
+        - name: totaldue
